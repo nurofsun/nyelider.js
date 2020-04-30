@@ -42,9 +42,6 @@
               <div class="vlider-item">
                 <div class="content">9</div>
               </div>
-              <div class="vlider-item">
-                <div class="content">10</div>
-              </div>
             </div>
           </div>
           <div class="vlider-control">
@@ -55,10 +52,23 @@
               Next
             </button>
           </div>
+          <div class="vlider-indicator">
+            <!-- indicator icons goes here -->
+          </div>
         </div>
         <!-- end -->
       </div>
     </div>
     <script src="dist/scripts/index.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var foo = new Vlider({
+          withIndicator: true,
+          size: 3,
+          el: '.vlider'
+        });
+        foo.init()
+      });
+    </script>
   </body>
 </html>

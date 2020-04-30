@@ -4,8 +4,8 @@
   "description": "Slider carousel",
   "main": "index.js",
   "scripts": {
-    "compile:css": "node-sass -w -r src/sass/ -o dist/styles/",
-    "compile:js": "babel -w --delete-dir-on-start src/js/ -d dist/scripts/",
+    "compile:css": "node-sass -r src/sass/ -o dist/styles/",
+    "compile:js": "babel --delete-dir-on-start src/js/ -d dist/scripts/",
     "server": "live-server --no-browser --port=2323 --ignorePattern=/node_modules\//"
   },
   "author": "Nurahmat",

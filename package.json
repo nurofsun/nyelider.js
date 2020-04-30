@@ -4,9 +4,9 @@
   "description": "Slider carousel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile:css": "node-sass -w -r src/sass/ -o dist/styles/",
-    "compile:js": "babel -w --delete-dir-on-start src/js/ -d dist/scripts/"
+    "compile:js": "babel -w --delete-dir-on-start src/js/ -d dist/scripts/",
+    "server": "live-server --no-browser --port=2323 --ignorePattern=/node_modules\//"
   },
   "author": "Nurahmat",
   "license": "ISC",

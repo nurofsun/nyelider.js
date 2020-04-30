@@ -1,0 +1,14 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_new_line = false
+
+[*.{js,jsx,json,ts,tsx}]
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+[*.{sass,scss,css}]
+indent_style = space
+indent_size = 2

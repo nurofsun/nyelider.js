@@ -1,0 +1,12 @@
+{
+  "name": "vlider",
+  "version": "1.0.0",
+  "description": "Slider carousel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:css": "node-sass -w -r src/sass/ -o dist/styles/"
+  },
+  "author": "Nurahmat",
+  "license": "ISC"
+}

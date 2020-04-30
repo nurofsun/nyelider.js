@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:css": "node-sass -w -r src/sass/ -o dist/styles/"
+    "compile:css": "node-sass -w -r src/sass/ -o dist/styles/",
+    "compile:js": "babel -w --delete-dir-on-start src/js/ -d dist/scripts/"
   },
   "author": "Nurahmat",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6"
+  }
 }

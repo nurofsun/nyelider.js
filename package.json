@@ -6,6 +6,7 @@
   "scripts": {
     "compile:css": "node-sass -r src/sass/ -o dist/styles/",
     "compile:js": "babel --delete-dir-on-start src/js/ -d dist/scripts/",
+    "build:js": "babel --delete-dir-on-start --no-comments --minified src/js/ -d dist/scripts/",
     "server": "live-server --no-browser --port=2323 --ignorePattern=/node_modules\//"
   },
   "author": "Nurahmat",

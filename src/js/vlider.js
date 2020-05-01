@@ -52,12 +52,6 @@ class Vlider {
                 });
             });
         }
-        // just for debugging
-        console.log(`
-            element: ${this.el},
-            direction: ${this.direction},
-            size: ${this.size}
-        `)
         vliderNext.addEventListener('click', (event) => {
             if (vliderPosition >= vliderLimit) {
                 vliderPosition = 0;

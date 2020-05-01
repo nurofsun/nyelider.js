@@ -15,7 +15,11 @@ var Vlider = /*#__PURE__*/function () {
         _ref$el = _ref.el,
         el = _ref$el === void 0 ? '.vlider' : _ref$el,
         _ref$withIndicator = _ref.withIndicator,
-        withIndicator = _ref$withIndicator === void 0 ? false : _ref$withIndicator;
+        withIndicator = _ref$withIndicator === void 0 ? false : _ref$withIndicator,
+        _ref$autoPlay = _ref.autoPlay,
+        autoPlay = _ref$autoPlay === void 0 ? false : _ref$autoPlay,
+        _ref$delay = _ref.delay,
+        delay = _ref$delay === void 0 ? 3000 : _ref$delay;
 
     _classCallCheck(this, Vlider);
 
@@ -23,6 +27,8 @@ var Vlider = /*#__PURE__*/function () {
     this.direction = direction;
     this.el = el;
     this.withIndicator = withIndicator;
+    this.autoPlay = autoPlay;
+    this.delay = delay;
   }
 
   _createClass(Vlider, [{
@@ -31,13 +37,13 @@ var Vlider = /*#__PURE__*/function () {
       var _this = this;
 
       var vlider = document.querySelector(this.el),
-          vliderGrid = document.querySelector('.vlider-grid'),
+          vliderGrid = vlider.querySelector('.vlider-grid'),
           vliderPosition = 0,
-          vliderItems = document.querySelectorAll('.vlider-item'),
+          vliderItems = vlider.querySelectorAll('.vlider-item'),
           vliderPerClickMove = 100 / this.size,
           vliderLimit = vliderPerClickMove * vliderItems.length - vliderPerClickMove * this.size,
-          vliderNext = document.querySelector('.vlider-next'),
-          vliderPrev = document.querySelector('.vlider-prev'); // initialize the size of slider items
+          vliderNext = vlider.querySelector('.vlider-next'),
+          vliderPrev = vlider.querySelector('.vlider-prev'); // initialize the size of slider items
 
       vliderItems.forEach(function (item) {
         item.style.flexBasis = 100 / _this.size + '%';
@@ -46,16 +52,36 @@ var Vlider = /*#__PURE__*/function () {
       var enableIndicator = function enableIndicator() {
         var result = '';
 
-        for (var i = 0; i < _this.size; i++) {
+        if (result !== '') {
+          var _result = '';
+        }
+
+        for (var i = 0; i < vliderItems.length / _this.size; i++) {
           result += "<span class=\"icon\"></span>";
         }
 
         return result;
       };
 
+      var itemAutoPlay = function itemAutoPlay() {
+        if (vliderPosition >= vliderLimit) {
+          vliderPosition = 0;
+        } else {
+          vliderPosition += vliderPerClickMove;
+        }
+
+        vliderGrid.style.right = vliderPosition + '%';
+      };
+
+      if (this.autoPlay) {
+        setInterval(function () {
+          itemAutoPlay();
+        }, this.delay);
+      }
+
       if (this.withIndicator) {
-        document.querySelector('.vlider-indicator').innerHTML = enableIndicator();
-        var vliderIndicators = document.querySelectorAll('.vlider-indicator > .icon');
+        vlider.querySelector('.vlider-indicator').innerHTML = enableIndicator();
+        var vliderIndicators = vlider.querySelectorAll(this.el + ' .vlider-indicator > .icon');
         vliderIndicators.forEach(function (indicator, index) {
           indicator.addEventListener('click', function (event) {
             vliderPosition = vliderPerClickMove * _this.size * index;

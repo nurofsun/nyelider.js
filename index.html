@@ -11,64 +11,134 @@
     <div class="container">
       <div class="section">
         <h2 class="title">Vlider Demo</h2>
-        <!-- vlider begin here -->
-        <div class="vlider">
-          <div class="vlider-inner">
-            <div class="vlider-grid">
-              <div class="vlider-item">
-                <div class="content">1</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">2</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">3</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">4</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">5</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">6</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">7</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">8</div>
-              </div>
-              <div class="vlider-item">
-                <div class="content">9</div>
+
+        <div class="section">
+          <div class="vlider" id="vlider-1">
+            <div class="vlider-inner">
+              <div class="vlider-grid">
+                <div class="vlider-item">
+                  <div class="content">1</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">2</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">3</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">4</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">5</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">6</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">7</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">8</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">9</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">10</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="vlider-control">
-            <button class="vlider-prev">
-              Prev
-            </button>
-            <button class="vlider-next">
-              Next
-            </button>
-          </div>
-          <div class="vlider-indicator">
-            <!-- indicator icons goes here -->
+            <div class="vlider-control">
+              <div class="vlider-prev">Prev</div>
+              <div class="vlider-next">Next</div>
+            </div>
+            <div class="vlider-indicator"></div>
           </div>
         </div>
-        <!-- end -->
+
+        <div class="section">
+          <div class="vlider" id="vlider-2">
+            <div class="vlider-inner">
+              <div class="vlider-grid">
+                <div class="vlider-item">
+                  <div class="content">1</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">2</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">3</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">4</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">5</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">6</div>
+                </div>
+              </div>
+            </div>
+            <div class="vlider-control">
+              <div class="vlider-prev">Prev</div>
+              <div class="vlider-next">Next</div>
+            </div>
+            <div class="vlider-indicator"></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="vlider" id="vlider-3">
+            <div class="vlider-inner">
+              <div class="vlider-grid">
+                <div class="vlider-item">
+                  <div class="content">1</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">2</div>
+                </div>
+                <div class="vlider-item">
+                  <div class="content">3</div>
+                </div>
+              </div>
+            </div>
+            <div class="vlider-control">
+              <div class="vlider-prev"></div>
+              <div class="vlider-next"></div>
+            </div>
+            <div class="vlider-indicator"></div>
+          </div>
+        </div>
+
       </div>
     </div>
     <script src="dist/scripts/index.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var foo = new Vlider({
-          withIndicator: true,
           size: 3,
-          el: '.vlider'
-        });
+          withIndicator: true,
+          el: '#vlider-2'
+        })
         foo.init()
+
+        var bar = new Vlider({
+          size: 2,
+          withIndicator: true,
+          el: '#vlider-1'
+        })
+        bar.init()
+
+        var boo = new Vlider({
+          size: 1,
+          withIndicator: true,
+          el: '#vlider-3',
+          autoPlay: true
+        })
+        boo.init()
       });
+      
     </script>
   </body>
 </html>

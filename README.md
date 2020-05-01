@@ -1,5 +1,5 @@
-# Vlider
-JavaScript library for building carousel without any dependencies.
+# Nyelider.js
+Standalone javascript library to make carousel component.
 
 ## Basic Markup
 ```html

@@ -4,136 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/styles/style.css">
-    <link rel="stylesheet" href="dist/styles/vlider.css">
-    <title>Vlider</title>
+    <link rel="stylesheet" href="dist/styles/nyelider.css">
+    <title>Nyelider</title>
   </head>
   <body>
     <div class="container">
       <div class="section">
-        <h2 class="title">Vlider Demo</h2>
+        <h2 class="title">Nyelider Demo</h2>
 
         <div class="section">
-          <div class="vlider" id="vlider-1">
-            <div class="vlider-inner">
-              <div class="vlider-grid">
-                <div class="vlider-item">
+          <div class="nyelider" id="nyelider-1">
+            <div class="nyelider-inner">
+              <div class="nyelider-grid">
+                <div class="nyelider-item">
                   <div class="content">1</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">2</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">3</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">4</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">5</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">6</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">7</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">8</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">9</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">10</div>
                 </div>
               </div>
             </div>
-            <div class="vlider-control">
-              <div class="vlider-prev">Prev</div>
-              <div class="vlider-next">Next</div>
+            <div class="nyelider-control">
+              <div class="nyelider-prev">Prev</div>
+              <div class="nyelider-next">Next</div>
             </div>
-            <div class="vlider-indicator"></div>
+            <div class="nyelider-indicator"></div>
           </div>
         </div>
 
         <div class="section">
-          <div class="vlider" id="vlider-2">
-            <div class="vlider-inner">
-              <div class="vlider-grid">
-                <div class="vlider-item">
+          <div class="nyelider" id="nyelider-2">
+            <div class="nyelider-inner">
+              <div class="nyelider-grid">
+                <div class="nyelider-item">
                   <div class="content">1</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">2</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">3</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">4</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">5</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">6</div>
                 </div>
               </div>
             </div>
-            <div class="vlider-control">
-              <div class="vlider-prev">Prev</div>
-              <div class="vlider-next">Next</div>
+            <div class="nyelider-control">
+              <div class="nyelider-prev">Prev</div>
+              <div class="nyelider-next">Next</div>
             </div>
-            <div class="vlider-indicator"></div>
+            <div class="nyelider-indicator"></div>
           </div>
         </div>
 
         <div class="section">
-          <div class="vlider" id="vlider-3">
-            <div class="vlider-inner">
-              <div class="vlider-grid">
-                <div class="vlider-item">
+          <div class="nyelider" id="nyelider-3">
+            <div class="nyelider-inner">
+              <div class="nyelider-grid">
+                <div class="nyelider-item">
                   <div class="content">1</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">2</div>
                 </div>
-                <div class="vlider-item">
+                <div class="nyelider-item">
                   <div class="content">3</div>
                 </div>
               </div>
             </div>
-            <div class="vlider-control">
-              <div class="vlider-prev"></div>
-              <div class="vlider-next"></div>
+            <div class="nyelider-control">
+              <div class="nyelider-prev"></div>
+              <div class="nyelider-next"></div>
             </div>
-            <div class="vlider-indicator"></div>
+            <div class="nyelider-indicator"></div>
           </div>
         </div>
 
       </div>
     </div>
-    <script src="dist/scripts/vlider.js"></script>
+    <script src="dist/scripts/nyelider.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        var foo = new Vlider({
+        var foo = new Nyelider({
           size: 3,
           withIndicator: true,
-          el: '#vlider-2'
+          el: '#nyelider-2'
         })
         foo.init()
 
-        var bar = new Vlider({
+        var bar = new Nyelider({
           size: 2,
           withIndicator: true,
-          el: '#vlider-1'
+          el: '#nyelider-1'
         })
         bar.init()
 
-        var boo = new Vlider({
+        var boo = new Nyelider({
           size: 1,
           withIndicator: true,
-          el: '#vlider-3',
+          el: '#nyelider-3',
           autoPlay: true
         })
         boo.init()

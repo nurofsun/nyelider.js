@@ -15,10 +15,10 @@ Standalone javascript library to make carousel component.
   <!-- control -->
   <div class="nyelider-control">
     <div class="nyelider-prev">
-    
+      <!-- add icon here -->
     </div>
     <div class="nyelider-next">
-    
+      <!-- and also here -->
     </div>
   </div>
   <!-- if you enable withIndicator options, you must have add this element -->

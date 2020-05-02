@@ -38,5 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 if you add `with-shadow` class on class="vlider", it will add shadow white at edge.
 
 ### Todo
-[] Styling
-[] Functionality with JS
+- [x] Styling
+- [x] Functionality with JS
+- [x] AutoPlay Feature

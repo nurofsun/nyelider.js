@@ -13,7 +13,7 @@ class Nyelider {
             nyeliderPosition = 0,
             nyeliderItems = nyelider.querySelectorAll('.nyelider-item'),
             nyeliderPerClickMove = 100 / this.size,
-            nyeliderLimit = (nyeliderPerClickMove * nyeliderItems.length) - (nyeliderPerClickMove * this.size),
+            nyeliderLimit = Math.floor((nyeliderPerClickMove * nyeliderItems.length) - (nyeliderPerClickMove * this.size)),
             nyeliderNext = nyelider.querySelector('.nyelider-next'),
             nyeliderPrev = nyelider.querySelector('.nyelider-prev');
         // initialize the size of slider items
@@ -51,6 +51,8 @@ class Nyelider {
                     nyeliderGrid.style.right = nyeliderPosition + '%';
                 });
             });
+        } else {
+            nyelider.querySelector('.nyelider-indicator').style.display = 'none';
         }
         nyeliderNext.addEventListener('click', (event) => {
             if (nyeliderPosition >= nyeliderLimit) {

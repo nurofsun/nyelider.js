@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <style>
+     #app {
+      max-width: 567px;
+      margin: 0px auto;
+      padding: 0px 10px;
+     }
+    </style>
+    <link rel="stylesheet" href="dist/styles/nyelider.css">
+    <title>Nyelider</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nyelider" id="carouselHeader">
+        <div class="nyelider-inner">
+          <div class="nyelider-grid">
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">1</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">2</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">3</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">4</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">5</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">6</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">7</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">8</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">9</h2>
+              </div>
+            </div>
+            <div class="nyelider-item">
+              <div class="box has-background-dark">
+                <h2 class="has-text-centered is-size-2 has-text-white has-text-weight-bold">10</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nyelider-control">
+          <button class="nyelider-prev"></button>
+          <button class="nyelider-next"></button>
+        </div>
+        <div class="nyelider-indicator"></div>
+      </div>
+    </div>
+    
+    <script src="dist/scripts/nyelider.js"></script>
+    <script>
+      let carouselHeader = new Nyelider({
+        el: '#carouselHeader',
+        size: 3,
+        withIndicator: true
+      });
+      carouselHeader.init();
+    </script>
+  </body>
+</html>

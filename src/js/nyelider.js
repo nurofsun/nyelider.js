@@ -8,6 +8,10 @@ class Nyelider {
         this.delay = delay;
     }
     init() {
+        let mobileScreen = window.matchMedia('(max-width: 640px)');
+        if (mobileScreen.matches) {
+            this.size = 1;
+        }
         let nyelider = document.querySelector(this.el),
             nyeliderGrid = nyelider.querySelector('.nyelider-grid'),
             nyeliderPosition = 0,

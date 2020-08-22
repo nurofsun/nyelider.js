@@ -7,7 +7,7 @@
     "compile:css": "node-sass -r src/sass/ -o dist/styles/",
     "build:css": "node-sass -r src/sass/ -o dist/styles/ && postcss dist/styles/nyelider.css -o dist/styles/nyelider.css -m -u autoprefixer cssnano",
     "compile:js": "babel --delete-dir-on-start src/js/ -d dist/scripts/",
-    "build:js": "babel --delete-dir-on-start --no-comments --minified src/js/ -d dist/scripts/",
+    "build:js": "babel --delete-dir-on-start src/js/ -d dist/scripts/",
     "server": "live-server --no-browser --port=2323 --ignorePattern=/node_modules//"
   },
   "author": "Nurahmat",
@@ -17,6 +17,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "autoprefixer": "^9.7.6",
+    "babel-preset-minify": "^0.5.1",
     "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.1"
   }

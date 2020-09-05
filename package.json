@@ -1,8 +1,7 @@
 {
   "name": "nyelider.js",
   "version": "1.0.0",
-  "description": "Slider carousel",
-  "main": "index.js",
+  "description": "Beautiful carousel slider with no dependencies",
   "scripts": {
     "compile:css": "node-sass -r src/sass/ -o dist/styles/",
     "build:css": "node-sass -r src/sass/ -o dist/styles/ && postcss dist/styles/nyelider.css -o dist/styles/nyelider.css -m -u autoprefixer cssnano",
